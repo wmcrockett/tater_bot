@@ -34,41 +34,7 @@ function postMessage() {
     "text" : "Now we're TALKIN TATERS"
   };
   
-  function russet() {
-  var requestR = JSON.parse(this.req.chunks[0]),
-      botRegexR = /^\/russet westbrook$/;
-
-  if(requestR.text && botRegexR.test(requestR.text)) {
-    this.res.writeHead(200);
-    postRusset();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
-}
-
-function postRusset() {
-  var botResponseR, options, body, botReq;
-
-  botResponse = cool();
-
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  {
-  "bot_id"  : botID,
-  "attachments" : [
-    {
-      "type"  : "image",
-      "url"   : "https://pbs.twimg.com/media/Clf3g7bWAAAWSIH.jpg"
-    };
-  
-
+ 
   console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
