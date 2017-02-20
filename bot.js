@@ -6,7 +6,7 @@ var botID = "6829bbf4c4f1c81b3484ab0fa5";
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/taters$/;
-      botRegex2 = /^\/russet westbrook$/;
+  
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
