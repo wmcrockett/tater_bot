@@ -35,10 +35,10 @@ function postMessage() {
   };
   
   function russet() {
-  var requestR = JSON.parse(this.req.chunks[0]),
-      botRegexR = /^\/russet westbrook$/;
+  var request = JSON.parse(this.req.chunks[0]),
+      botRegex = /^\/russet westbrook$/;
 
-  if(requestR.text && botRegexR.test(requestR.text)) {
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postRusset();
     this.res.end();
