@@ -52,6 +52,7 @@ function postMessage() {
 
   body = {
   "bot_id"  : botID,
+  "text" : "russet"
   "attachments" : [
     {
       "type"  : "image",
