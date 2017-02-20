@@ -34,6 +34,24 @@ function postMessage() {
     "text" : "Now we're TALKIN TATERS"
   };
 
+  function postRusset() {
+    var options, body, botReq;
+
+    options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
+
+  body = {
+  "bot_id"  : botID,
+  "attachments" : [
+    {
+      "type"  : "image",
+      "url"   : "https://pbs.twimg.com/media/Clf3g7bWAAAWSIH.jpg"
+    }]};
+  };
+
   console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
