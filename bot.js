@@ -14,7 +14,6 @@ function respond() {
     this.res.end();
   } 
   else if(request.text && botRegex2.test(request.text)) {
-    (request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postRusset();
     this.res.end();
