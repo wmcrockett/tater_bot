@@ -13,11 +13,6 @@ function respond() {
     postMessage();
     this.res.end();
   } 
-  else if (request.text && botRegex2.test(request.text)) {
-    this.res.writeHead(200);
-    postRusset();
-    this.res.end();
-  }
   else {
     console.log("don't care");
     this.res.writeHead(200);
@@ -40,24 +35,6 @@ function postMessage() {
     "bot_id" : "6829bbf4c4f1c81b3484ab0fa5",
     "text" : botResponse
   };
-
-  function postRusset() {
-    var options, body, botReq;
-
-    options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  body = {
-  "bot_id"  : botID,
-  "attachments" : [
-    {
-      "type"  : "image",
-      "url"   : "https://pbs.twimg.com/media/Clf3g7bWAAAWSIH.jpg"
-    }]};
-  }
 
   console.log('sending ' + botResponse + ' to ' + botID);
 
