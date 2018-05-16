@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/talkin taters$/;
+      botRegex = /^\/talkin twinks$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -32,7 +32,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : "Now we're TALKIN TATERS"
+    "text" : "R U TALKIN TWINKS 2 ME???"
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
