@@ -32,7 +32,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : "shayaan a sweet potato snack"
+    "text" : "shayaan a tater snack"
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
